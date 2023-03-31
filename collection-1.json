@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "b85bac75-b4ae-482a-abd0-335ee54929a0",
+		"name": "collection-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{baseUrl}}/api/mis/v1/auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"password\": \"test\",\r\n  \"userName\": \"mis.ap\"\r\n}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/mis/v1/auth",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"mis",
+						"v1",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f7671b22-fdf0-4107-883d-33de69760ecd",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "bba0da2b-c764-460d-b690-99ff5349496c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "da8c8bcf-4b12-4b27-80e5-72d186d683ab",
+			"key": "baseUrl",
+			"value": "http://apps.techsarthee.com:8081",
+			"type": "string"
+		}
+	]
+}
