@@ -9,6 +9,12 @@ pipeline {
         choice(name: 'TEST_ENV', choices: ['dev','qa', 'prod'], description: 'API testing environment')
         string(name: 'APP_SCOP', description: 'Api scop', trim: true)
     }
+    environment {
+        DISABLE_AUTH = 'true'
+        DB_ENGINE    = 'sqlite'
+        TEST_ENV = '${params.TEST_ENV}'
+        APP_SCOP = '${params.APP_SCOP}'
+    }
     stages {
         stage('Stage 0 Checkout') {
             steps {
@@ -18,8 +24,10 @@ pipeline {
                 }
                 echo 'Environment :: ${TEST_ENV}'
                 echo 'App scop :: ${APP_SCOP}'
-                echo '%TEST_ENV%'
-                echo '%APP_SCOP%'
+                echo '${TEST_ENV}'
+                echo '${APP_SCOP}'
+                echo '${DISABLE_AUTH}'
+                echo '${APP_SCOP}'
             }
         }
     }
