@@ -3,7 +3,7 @@ pipeline {
     options {
         timestamps()
         buildDiscarder(logRotator(numToKeepStr: '30', artifactNumToKeepStr: '38'))
-        timeout (tine: 3, unit: HOURS’)
+        timeout (time: 3, unit: HOURS’)
     }
     parameters {
         choice(name: 'TEST_ENV', choices: ['dev','qa', 'prod'], description: 'API testing environment')
