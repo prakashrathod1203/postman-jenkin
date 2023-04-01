@@ -12,12 +12,6 @@ pipeline {
     }
     stages {
         stage('Stage 0 Checkout') {
-            agent {
-                warlock {
-                    connector 'ssh'
-                    selector 'build&&(linux)&&vi'
-                }
-            }
             steps {
                 script {
                     env.TEST_ENV = "${params.TEST_ENV}"
