@@ -18,8 +18,8 @@ pipeline {
                 }
                 echo 'Environment :: ${TEST_ENV}'
                 echo 'App scop :: ${APP_SCOP}'
-                echo ${params.TEST_ENV}
-                echo ${params.APP_SCOP}
+                echo '${params.TEST_ENV}'
+                echo '${params.APP_SCOP}'
             }
         }
     }
