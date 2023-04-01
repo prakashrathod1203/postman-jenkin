@@ -5,7 +5,7 @@ pipeline {
         stage('Running tests') {
             steps {
                 echo 'Testing'
-                sh "newman run collection-1.json"
+                sh "newman run ./collection-1.json"
             }
         }
     }
